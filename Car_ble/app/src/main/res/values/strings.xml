@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Car_blu</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_demo">Демо</string>
+    <string name="action_save">Включить запись действий</string>
+    <string name="action_stop_save">Остановка записи</string>
+    <string name="action_read">Исполнить запись</string>
+
+</resources>
