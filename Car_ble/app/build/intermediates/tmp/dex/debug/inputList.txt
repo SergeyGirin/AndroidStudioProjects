@@ -1,0 +1,5 @@
+C:\Users\user_\AndroidStudioProjects\Car_ble\app\build\intermediates\classes\debug
+C:\Users\user_\AndroidStudioProjects\Car_ble\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-943f95ec76dc34482a70e9ae1eace34e2a42f4b2.jar
+C:\Users\user_\AndroidStudioProjects\Car_ble\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-960f0399b91cae04096c33f736a6b7dd0788d1c6.jar
+C:\Users\user_\AndroidStudioProjects\Car_ble\app\build\intermediates\pre-dexed\debug\classes-8c0923d6d9ad18ebb687345696777100c11cd788.jar
+C:\Users\user_\AndroidStudioProjects\Car_ble\app\build\intermediates\pre-dexed\debug\classes-7c0437b974bca9d8e63b6615796ae7da0f368a80.jar

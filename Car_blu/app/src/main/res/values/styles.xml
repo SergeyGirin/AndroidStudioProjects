@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here.
+        <item name="android:popupBackground">#FF0000</item>
+        <item name="android:textColor">#FF0000</item>
+        -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+
+    </style>
+    <style name="MyActionBar" parent="Theme.AppCompat.Light">
+        <item name="android:background">#FF0000</item>
+    </style>
+
+</resources>

@@ -1,0 +1,1 @@
+C:\Users\user_\Downloads\Edison_to_Android_BLE-master\Edison_to_Android_BLE-master\Android\BLEConnect\app\build\intermediates\classes\debug
