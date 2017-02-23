@@ -2,18 +2,25 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\1\Downloads\Car_blu\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\1\Downloads\Car_blu\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-f81138a74c0676b0d7867ffb5514af652e9d27d2.jar" />
+    </item>
+    <item
+        jar="C:\Users\1\AndroidStudioProjects\Car_blu\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\1\AndroidStudioProjects\Car_blu\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-0234f1b5125d28f783fccd7efc75a8d84ad5a63a.jar" />
+    </item>
+    <item
         jar="C:\Users\1\Downloads\Car_blu\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
         <dex dex="C:\Users\1\Downloads\Car_blu\app\build\intermediates\pre-dexed\debug\classes-8eef56c793df54c60ad73e030a286cc5fd087a8d.jar" />
-    </item>
-    <item
-        jar="C:\Users\1\Downloads\Car_blu\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\1\Downloads\Car_blu\app\build\intermediates\pre-dexed\debug\classes-35c602b38e0a6c18be40f358f8dbf9df701c3bd9.jar" />
     </item>
     <item
         jar="C:\Users\1\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
@@ -23,11 +30,25 @@
         <dex dex="C:\Users\1\Downloads\Car_blu\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-3a9dc0fab84d3b021f8e90fb67c01f564d70941c.jar" />
     </item>
     <item
-        jar="C:\Users\1\Downloads\Car_blu\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jar="C:\Users\1\AndroidStudioProjects\Car_blu\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\1\Downloads\Car_blu\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-f81138a74c0676b0d7867ffb5514af652e9d27d2.jar" />
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\1\AndroidStudioProjects\Car_blu\app\build\intermediates\pre-dexed\debug\classes-aff4a2eb55db92e2635a8382569eabc2a10aed40.jar" />
+    </item>
+    <item
+        jar="C:\Users\1\AndroidStudioProjects\Car_blu\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\1\AndroidStudioProjects\Car_blu\app\build\intermediates\pre-dexed\debug\classes-b9150f12d4fa602edb1af560d756a82f90ae53c3.jar" />
+    </item>
+    <item
+        jar="C:\Users\1\Downloads\Car_blu\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\1\Downloads\Car_blu\app\build\intermediates\pre-dexed\debug\classes-35c602b38e0a6c18be40f358f8dbf9df701c3bd9.jar" />
     </item>
 
 </items>

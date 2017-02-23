@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/1/Downloads/Car_blu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/C:/Users/1/AndroidStudioProjects/Car_blu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -121,11 +121,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/Users/1/Downloads/Car_blu/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/1/AndroidStudioProjects/Car_blu/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/Users/1/Downloads/Car_blu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/C:/Users/1/AndroidStudioProjects/Car_blu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -159,7 +159,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/Users/1/Downloads/Car_blu/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/1/AndroidStudioProjects/Car_blu/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_demo">Демо</string>
     <string name="action_read">Исполнить запись</string>
@@ -168,7 +168,7 @@
     <string name="action_stop_save">Остановка записи</string>
     <string name="app_name">Car_blu</string>
     <string name="hello_world">Hello world!</string>
-    <!-- From: file:/C:/Users/1/Downloads/Car_blu/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/1/AndroidStudioProjects/Car_blu/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here.
@@ -178,7 +178,7 @@
         <item name="actionBarStyle">@style/MyActionBar</item>
 
     </style>
-    <!-- From: file:/C:/Users/1/Downloads/Car_blu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/C:/Users/1/AndroidStudioProjects/Car_blu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">
         <item name="android:textColor">?android:textColorPrimary</item>
@@ -932,12 +932,12 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/C:/Users/1/Downloads/Car_blu/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/1/AndroidStudioProjects/Car_blu/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="MyActionBar" parent="Theme.AppCompat.Light">
         <item name="android:background">#FF0000</item>
     </style>
-    <!-- From: file:/C:/Users/1/Downloads/Car_blu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/C:/Users/1/AndroidStudioProjects/Car_blu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
