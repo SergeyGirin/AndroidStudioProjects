@@ -22,6 +22,7 @@ import android.graphics.Point;
 import android.os.Build;
 import android.os.Environment;
 import android.os.PowerManager;
+import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -62,6 +63,7 @@ public class MainActivity extends ActionBarActivity {
     private static final long SCAN_PERIOD = 10000; //10 seconds
     //private static final String DEVICE_NAME = "HMSoft"; //display name for Grove BLE
     private static final String DEVICE_NAME = "BT05"; //display name for Grove BLE
+    private Vibrator vibrator;
 
 
 
@@ -79,6 +81,7 @@ public class MainActivity extends ActionBarActivity {
     // глобальные переменные
     // признак подключентя
     int isConnected = 0;
+    int isLogin = 0;
     // координаты центра экрана
     int isCentrX = 0;
     int isCentrY = 0;
@@ -123,7 +126,29 @@ public class MainActivity extends ActionBarActivity {
         PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, "My Tag");
         wl.acquire();
 
+        vibrator = (Vibrator) getSystemService (VIBRATOR_SERVICE);
+
         mTimer = new Timer();
+        connectBLE();
+        Log.d("GIRIN", "графический режим");
+        // графический режим
+        // отображаем его в Activity
+        setContentView(new Draw2D(this));
+
+
+        // размер экрана
+        Display display = getWindowManager().getDefaultDisplay();
+        Point isSize = new Point();
+        display.getSize(isSize);
+        isCentrX = isSize.x/2;
+        isCentrY = isSize.y/2;
+        isCentrR = isCentrX-isCentrX/5;
+        touchX =  isCentrX;
+        touchY =  isCentrY;
+    }
+
+    private void connectBLE() {
+        statusUpdate("connectBLE() begin");
         //check to see if Bluetooth Low Energy is supported on this device
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
             Toast.makeText(this, "BLE not supported on this device", Toast.LENGTH_SHORT).show();
@@ -156,21 +181,7 @@ public class MainActivity extends ActionBarActivity {
 
         //try to find the Grove BLE V1 module
         searchForDevices();
-        Log.d("GIRIN", "графический режим");
-        // графический режим
-        // отображаем его в Activity
-        setContentView(new Draw2D(this));
 
-
-        // размер экрана
-        Display display = getWindowManager().getDefaultDisplay();
-        Point isSize = new Point();
-        display.getSize(isSize);
-        isCentrX = isSize.x/2;
-        isCentrY = isSize.y/2;
-        isCentrR = isCentrX-isCentrX/5;
-        touchX =  isCentrX;
-        touchY =  isCentrY;
     }
 
     // Меню приложения
@@ -566,6 +577,7 @@ public class MainActivity extends ActionBarActivity {
                 mPaint.setColor(Color.BLUE);
             } else {
                 mPaint.setColor(Color.RED);
+                //if (isLogin == 1) connectBLE();
             }
 
             mPaint.setTextSize(30);
@@ -713,12 +725,15 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public void onLeScan(final BluetoothDevice device, final int rssi,
                              byte[] scanRecord) {
-            statusUpdate("onLeScan begin");
+            //statusUpdate("onLeScan begin ...");
+            //statusUpdate((String.valueOf(rssi)));
+            //statusUpdate(scanRecord.toString());
             if (device != null) {
                 statusUpdate("BLE device ="+device.getName());
                 if (mDevices.indexOf(device) == -1)//to avoid duplicate entries
                 {
                     if (DEVICE_NAME.equals(device.getName())) {
+                        statusUpdate("we found our device!");
                         mDevice = device;//we found our device!
                     }
                     mDevices.add(device);
@@ -769,6 +784,9 @@ public class MainActivity extends ActionBarActivity {
                 mBluetoothGatt.discoverServices();
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
                 statusUpdate("Device disconnected");
+                isConnected = 0;
+                vibrator.vibrate(3000);
+                //if (isLogin == 1){ statusUpdate("Reconnect"); connectBLE();}
             }
         }
 
@@ -782,49 +800,61 @@ public class MainActivity extends ActionBarActivity {
                     if(GROVE_SERVICE.equals(gattService.getUuid().toString()))
                     {
                         mBluetoothGattService = gattService;
-                        statusUpdate("Found communication Service");
-                        isConnected = 1;
+                        if (isConnected ==0 ) {
+                            statusUpdate("Found communication Service");
+                            isConnected = 1;
+                            isLogin = 1;
 
-                        Toast.makeText(MainActivity.this,"Connected",Toast.LENGTH_LONG).show();
-                        sendMessage("C;0;0;");
-                        //sendMessage("M;45;45;");
-                        myTimer = new Timer();
-                        myTimer.schedule(new TimerTask() {
-                            @Override
-                            public void run() {
-                                sendMessage("M;45;45;");
+                            sendMessage("C;0;0;");
+                            //sendMessage("M;45;45;");
+                            myTimer = new Timer();
+                            myTimer.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+                                    sendMessage("M;45;45;");
+                                }
+                            }, 1000);
+                            myTimer.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+                                    sendMessage("M;0;0;");
+                                }
+                            }, 1200);
+                            myTimer.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+                                    sendMessage("M;45;45;");
+                                }
+                            }, 1300);
+                            myTimer.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+                                    sendMessage("M;0;0;");
+                                }
+                            }, 1500);
+                            myTimer.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+                                    sendMessage("M;45;45;");
+                                }
+                            }, 1600);
+                            myTimer.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+                                    sendMessage("M;0;0;");
+                                }
+                            }, 1800);
+                            try {
+                                vibrator.vibrate(200);
+                                Thread.sleep(400);
+                                vibrator.vibrate(200);
+                                Thread.sleep(400);
+                                vibrator.vibrate(200);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
                             }
-                        }, 1000);
-                        myTimer.schedule(new TimerTask() {
-                            @Override
-                            public void run() {
-                                sendMessage("M;0;0;");
-                            }
-                        }, 1200);
-                        myTimer.schedule(new TimerTask() {
-                            @Override
-                            public void run() {
-                                sendMessage("M;45;45;");
-                            }
-                        }, 1300);
-                        myTimer.schedule(new TimerTask() {
-                            @Override
-                            public void run() {
-                                sendMessage("M;0;0;");
-                            }
-                        }, 1500);
-                        myTimer.schedule(new TimerTask() {
-                            @Override
-                            public void run() {
-                                sendMessage("M;45;45;");
-                            }
-                        }, 1600);
-                        myTimer.schedule(new TimerTask() {
-                            @Override
-                            public void run() {
-                                sendMessage("M;0;0;");
-                            }
-                        }, 1800);
+                        }
+
 
                     }
                 }
