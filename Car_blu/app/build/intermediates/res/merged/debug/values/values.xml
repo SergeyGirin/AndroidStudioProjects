@@ -138,6 +138,11 @@
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
     <item name="home" type="id"/>
+    <!-- From: file:/C:/Users/1/AndroidStudioProjects/Car_blu/app/src/main/res/values/ids.xml -->
+    <eat-comment/>
+    <item name="mv1" type="id">Draw2D</item>
+    <!-- From: file:/C:/Users/1/AndroidStudioProjects/Car_blu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <eat-comment/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>

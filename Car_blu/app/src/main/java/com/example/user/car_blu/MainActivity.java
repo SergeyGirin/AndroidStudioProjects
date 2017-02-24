@@ -16,6 +16,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
@@ -75,6 +76,7 @@ public class MainActivity extends ActionBarActivity {
     private BluetoothDevice mDevice; //external BLE device (Grove BLE module)
     private Timer mTimer;
     private Timer myTimer;
+
 
 
 
@@ -559,7 +561,6 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-
     public class Draw2D extends View {
         Paint mPaint = new Paint();
         public Draw2D(Context context) {
@@ -662,6 +663,7 @@ public class MainActivity extends ActionBarActivity {
                 message = "M;"+mLeft+";"+mRigth+";";
             }
             sendMessage(message);
+            invalidate();
         }
 
 
@@ -775,7 +777,7 @@ public class MainActivity extends ActionBarActivity {
         mBluetoothGatt = device.connectGatt(this, false, mGattCallback);
         return true;
     }
-    private final BluetoothGattCallback mGattCallback = new BluetoothGattCallback() {
+    public final BluetoothGattCallback mGattCallback = new BluetoothGattCallback() {
         @Override
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
             if (newState == BluetoothProfile.STATE_CONNECTED) {
@@ -804,6 +806,12 @@ public class MainActivity extends ActionBarActivity {
                             statusUpdate("Found communication Service");
                             isConnected = 1;
                             isLogin = 1;
+
+
+                            //int id7 = getResources().getIdentifier("Draw2D", "id", getPackageName());
+                            //statusUpdate("Found communication Service2"+id7);
+                            //Draw2D mv1 = (Draw2D) findViewById(id7);
+                            //mv1.reload();
 
                             sendMessage("C;0;0;");
                             //sendMessage("M;45;45;");
